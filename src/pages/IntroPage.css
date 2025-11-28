@@ -1,0 +1,203 @@
+/* src/pages/IntroPage.css */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500&display=swap');
+
+.intro-container {
+  min-height: 100vh;
+  background-color: #f0f8ff; /* Nền xanh nhạt dịu mắt */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+.intro-header {
+  background-color: #3498db;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.intro-header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+  font-size: 24px;
+}
+
+.btn-back {
+  position: absolute;
+  left: 20px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.btn-back:hover { background-color: white; color: #3498db; }
+
+/* Wrapper nội dung */
+.intro-content-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Section chung */
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  border-left: 5px solid #e67e22;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge {
+  background-color: #e74c3c;
+  color: white;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+/* 1. About Section */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.about-text h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #2980b9;
+  margin-top: 0;
+}
+
+.about-text p {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 2. News Section */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.news-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.news-card:hover { transform: translateY(-5px); }
+
+.news-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.news-info { padding: 15px; }
+.news-info h3 {
+  font-size: 16px;
+  margin: 0 0 10px 0;
+  color: #333;
+  line-height: 1.4;
+  height: 44px; /* Giới hạn 2 dòng */
+  overflow: hidden;
+}
+.news-meta { color: #e74c3c; font-size: 14px; font-weight: bold; }
+
+/* 3. Tips Section */
+.tips-section {
+  text-align: center;
+}
+.tips-section .section-title { justify-content: center; border: none; }
+
+.tip-card {
+  background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 10px 20px rgba(86, 171, 47, 0.3);
+}
+
+.tip-icon { font-size: 60px; }
+.tip-content { text-align: left; }
+.tip-content h3 { font-family: 'Montserrat', sans-serif; font-size: 24px; margin: 0 0 10px 0; }
+.tip-content p { font-size: 18px; margin: 0; line-height: 1.5; }
+
+.tip-note { margin-top: 15px; font-style: italic; color: #777; font-size: 14px; }
+
+/* Animation đổi tip */
+.fade-in { animation: fadeIn 0.5s ease-in-out; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 4. Support Section */
+.support-banner {
+  background-color: #34495e;
+  color: white;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.support-banner h2 { font-family: 'Montserrat', sans-serif; margin-top: 0; }
+.support-banner p { font-size: 18px; margin-bottom: 25px; color: #ddd; }
+
+.btn-chat {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+.btn-chat:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
