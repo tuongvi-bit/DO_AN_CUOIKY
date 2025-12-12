@@ -9,7 +9,7 @@ const pool = mysql.createPool({
     user: "root", 
     host: "localhost", 
     database: "yte_hocduong", 
-    password: '130613', 
+    password: "13062013", 
     port: 3306,
     
     // Cài đặt nâng cao cho MySQL Pool
